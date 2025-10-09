@@ -3,33 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic Calculator</title>
+  <title>Calculator</title>
   <link rel="stylesheet" href="styles.css">
- 
 </head>
 <body>
-  <h1 class="heading">Calculator</h1>
-  <div class="calculator">
-    <div class="display" id="display">0</div>
-    <div class="buttons">
-      <button class="btn" data-num="7">7</button>
-      <button class="btn" data-num="8">8</button>
-      <button class="btn" data-num="9">9</button>
-      <button class="btn operator" data-operator="/">/</button>
-      <button class="btn" data-num="4">4</button>
-      <button class="btn" data-num="5">5</button>
-      <button class="btn" data-num="6">6</button>
-      <button class="btn operator" data-operator="*">*</button>
-      <button class="btn" data-num="1">1</button>
-      <button class="btn" data-num="2">2</button>
-      <button class="btn" data-num="3">3</button>
-      <button class="btn operator" data-operator="-">-</button>
-      <button class="btn" data-num="0">0</button>
-      <button class="btn" id="clear">C</button>
-      <button class="btn" id="equals">=</button>
-      <button class="btn operator" data-operator="+">+</button>
+  <div id="overlay">
+    <video id="bg-video" autoplay loop muted> 
+      <source src="./bg_video.mp4" alt="Background Video" type="video/mp4">
+    </video>
+    <!-- <img src="bg.gif" alt="Background Video" id="bg-video"> -->
+  </div>
+
+  <div id="calculator-wrapper">
+  <div id="calculator">
+    <div id="display-container">
+      <input type="text" id="display" width="auto" height="auto" disabled>
+    </div>
+    <div class="container">
+      <button id="1" type="button" value="1" onclick="inputDisplay(event)" >1</button>
+      <button id="2" type="button" value="2" onclick="inputDisplay(event)">2</button>
+      <button id="3" type="button" value="3" onclick="inputDisplay(event)">3</button>
+      <button id="+" class="operator" type="button" value="+" onclick="inputDisplay(event)">+</button>
+      <button id="4" type="button" value="4" onclick="inputDisplay(event)">4</button>
+      <button id="5" type="button" value="5" onclick="inputDisplay(event)">5</button>
+      <button id="6" type="button" value="6" onclick="inputDisplay(event)">6</button>
+      <button id="-" class="operator" type="button" value="-" onclick="inputDisplay(event)">-</button>
+      <button id="7" type="button" value="7" onclick="inputDisplay(event)">7</button>
+      <button id="8" type="button" value="8" onclick="inputDisplay(event)">8</button>
+      <button id="9" type="button" value="9" onclick="inputDisplay(event)">9</button>
+      <button id="*" class="operator" type="button" value="*" onclick="inputDisplay(event)">*</button>
+      <button id="0" type="button" value="0" onclick="inputDisplay(event)">0</button>
+    
+      <button id="C" class="clear" type="button" value="C" onclick="inputDisplay(event)">C</button>
+      <button id="=" class="operator" type="button" value="=" onclick="inputDisplay(event)">=</button>
+      <button id="/" class="operator" type="button" value="/" onclick="inputDisplay(event)">/</button>
     </div>
   </div>
-  <script src="script.js"></script>
+  <div id="controls">
+  <label for="calc-color">Choose Calculator Color:</label>
+  <input type="color" id="calc-color" value="#000000">
+</div>
+
+</div>
 </body>
+<script src="index.js"></script>
 </html>
